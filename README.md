@@ -1,11 +1,11 @@
-## NEXT.JS Project
+## [NEXT.js](https://nextjs.org/) Project
 
-#### Lorem Ipsum articles List application.
+#### Lorem Ipsum articles list application.
 
 ### Dependencies
 
-- React
-- Next.JS
+- REACT
+- NEXT.js
 
 ### API
 
