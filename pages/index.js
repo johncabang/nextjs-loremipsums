@@ -15,25 +15,14 @@ export default function Home({ articles }) {
   );
 }
 
-export const getStaticProps = async () => {
-  // Will receive an error "TypeError: Only absolute URLs are supported"
-  // Should be: const res = await fetch(`http://localhost:3000/api/articles`);
-
-  const res = await fetch(`${server}/api/articles`);
-
-  const articles = await res.json();
-
-  return {
-    props: {
-      articles,
-    },
-  };
-};
+// CREATED API
 
 // export const getStaticProps = async () => {
-//   const res = await fetch(
-//     `https://jsonplaceholder.typicode.com/posts?_limit=5`
-//   );
+//   // Will receive an error "TypeError: Only absolute URLs are supported"
+//   // Should be: const res = await fetch(`http://localhost:3000/api/articles`);
+
+//   const res = await fetch(`${server}/api/articles`);
+
 //   const articles = await res.json();
 
 //   return {
@@ -42,3 +31,18 @@ export const getStaticProps = async () => {
 //     },
 //   };
 // };
+
+// JSONPLACEHOLDER API
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?_limit=10`
+  );
+  const articles = await res.json();
+
+  return {
+    props: {
+      articles,
+    },
+  };
+};
